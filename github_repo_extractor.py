@@ -197,7 +197,7 @@ class GitHubRepoExtractor:
 # Example usage
 if __name__ == "__main__":
     access_token = input("Enter your GitHub access token: ")
-    repo_full_name = input("Enter the full repository name (e.g., 'owner/repo'): ")
+    repo_full_name = input("Enter the full repository name (e.g., 'https://github.com/ltoscano/github-repo-extractor.git'): ")
 
     extractor = GitHubRepoExtractor(
         repo_input = repo_full_name, 
