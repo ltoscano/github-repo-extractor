@@ -1,6 +1,28 @@
+Metadata-Version: 2.1
+Name: github-repo-extractor
+Version: 0.1.1
+Summary: A tool to extract GitHub repositories into a single file
+Home-page: https://github.com/ltoscano/github-repo-extractor
+Author: Lorenzo Toscano
+Author-email: lorenzo.toscano@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygithub
+Requires-Dist: tqdm
+Requires-Dist: gitpython
+
 # GitHub Repository Extractor
 
-This Python tool allows you to extract the contents of a GitHub repository into a single text file. It's particularly useful for encapsulating an entire codebase into a single file, facilitating its use with Large Language Models (LLMs) that have high-capacity context memory.
+This Python script allows you to extract the contents of a GitHub repository into a single text file. It's particularly useful for encapsulating an entire codebase into a single file, facilitating its use with Large Language Models (LLMs) that have high-capacity context memory.
 
 ## Features
 
@@ -11,46 +33,34 @@ This Python tool allows you to extract the contents of a GitHub repository into 
 - Option to clone remote repositories temporarily
 - Ideal for preparing codebases for analysis by LLMs
 
+## Dependencies
+
+This project requires the following Python packages:
+
+- `pygithub`: For interacting with the GitHub API
+- `tqdm`: For displaying progress bars
+- `gitpython`: For handling Git operations
+
+You can install these dependencies using pip:
+
+```
+pip install pygithub tqdm gitpython
+```
+
 ## Installation
 
-You can install the GitHub Repository Extractor in several ways:
-
-### From PyPI
-
-The easiest way to install the package is via pip:
-
-```
-pip install github-repo-extractor
-```
-
-### From GitHub
-
-You can also install the latest version directly from the GitHub repository:
-
-```
-pip install git+https://github.com/ltoscano/github-repo-extractor.git
-```
-
-### Local Installation
-
-If you've cloned the repository, you can install it locally:
-
-1. Clone the repository:
+1. Clone this repository:
    ```
-   git clone https://github.com/ltoscano/github-repo-extractor.git
+   git clone https://github.com/yourusername/github-repo-extractor.git
    ```
-2. Navigate to the project directory:
+2. Install the required dependencies:
    ```
-   cd github-repo-extractor
-   ```
-3. Install the package:
-   ```
-   pip install .
+   pip install -r requirements.txt
    ```
 
 ## Usage
 
-1. Import the `GitHubRepoExtractor` class from the package.
+1. Import the `GitHubRepoExtractor` class from the script.
 2. Create an instance of `GitHubRepoExtractor` with your repository details.
 3. Set ignore and include lists as needed.
 4. Call the `extract_to_file()` method to start the extraction process.
@@ -98,7 +108,7 @@ This approach allows for more comprehensive and context-aware interactions with 
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute to this project.
 
 ## License
 
